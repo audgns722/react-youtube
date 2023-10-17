@@ -9,3 +9,9 @@
 
 ## 라이브러리 설치
 sass를 설치 : `npm install sass`
+
+## 터미널 깃 업로드 커밋
+git add .
+git status
+git commit -m "dd"
+git push -u origin main
