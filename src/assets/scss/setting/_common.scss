@@ -2,3 +2,12 @@ body {
     background-color: #f7fae9;
     color: var(--black);
 }
+
+// 각 섹션 공통 요소
+section {
+    padding: 40PX;
+    
+    @media (max-width: 800px) {
+        padding: 20px;
+    }
+}

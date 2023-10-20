@@ -1,0 +1,35 @@
+#header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 260px;
+    height: 100%;
+    z-index: 1000;
+    background-color: #115252;
+}
+#main {
+    max-width: 2000px;
+    min-height: 100vh;
+    margin: 0 auto;
+    padding-left: 260px;
+    background-color: var(--background);
+}
+#footer {
+    text-align: center;
+    background-color: var(--background);
+    // border-top: 1px solid var(--black);
+    padding: 10px 10px 10px 250px;
+    
+
+    a {
+        color: var(--black);
+        padding: 10px 20px;
+        display: inline-block;
+        transform: translateX(-50%);
+
+        &:hover {
+            @include underline;
+            text-decoration-color: var(--white);
+        }
+    }
+}
