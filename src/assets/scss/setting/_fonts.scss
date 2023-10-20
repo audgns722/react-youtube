@@ -55,4 +55,52 @@
     src: url("../../fonts//dodamdodam.woff2") format("woff2"),
          url("../../fonts//dodamdodam.woff") format("woff");
     font-display: swap;
+}
+@font-face {
+    font-family: 'Oswald';
+    font-weight: 200;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/Oswald/Oswald-ExtraLight.woff2') format('woff2'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/Oswald/Oswald-ExtraLight.woff') format('woff');
+    font-display: swap;
 } 
+@font-face {
+    font-family: 'Oswald';
+    font-weight: 300;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/Oswald/Oswald-Light.woff2') format('woff2'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/Oswald/Oswald-Light.woff') format('woff');
+    font-display: swap;
+} 
+@font-face {
+    font-family: 'Oswald';
+    font-weight: 400;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/Oswald/Oswald-Regular.woff2') format('woff2'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/Oswald/Oswald-Regular.woff') format('woff');
+    font-display: swap;
+} 
+@font-face {
+    font-family: 'Oswald';
+    font-weight: 500;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/Oswald/Oswald-Medium.woff2') format('woff2'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/Oswald/Oswald-Medium.woff') format('woff');
+    font-display: swap;
+} 
+@font-face {
+    font-family: 'Oswald';
+    font-weight: 600;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/Oswald/Oswald-SemiBold.woff2') format('woff2'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/Oswald/Oswald-SemiBold.woff') format('woff');
+    font-display: swap;
+} 
+@font-face {
+    font-family: 'Oswald';
+    font-weight: 700;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/Oswald/Oswald-Bold.woff2') format('woff2'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/Oswald/Oswald-Bold.woff') format('woff');
+    font-display: swap;
+}  

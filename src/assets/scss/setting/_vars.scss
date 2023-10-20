@@ -1,10 +1,12 @@
 :root {
     --mainfont-bookk : "bookkGothic";
     --mainfont-nexon : "nexonLv2";
+    --subfont-oswald : "Oswald";
 
     --mycolorgreen:  #145c00;
     --mycoloryellow:  #ffee00;
-    --acitvehover : rgba(30, 153, 77, 0.562);
+    --mycolorgray : #181818;
+    --acitvehover : rgb(253 253 253 / 11%);
 
     --black : #000;
     --black100 : #1d1d1d;
@@ -21,7 +23,7 @@
     --white500 : #a7a7a7;
     
     // 폰트 셋팅
-    font-family:  var(--mainfont-bookk), var(--mainfont-nexon);
+    font-family:  var(--mainfont-bookk), var(--mainfont-nexon), var(--subfont-oswald);
     font-size: 16px;
     line-height: 1.5;
     font-weight: 400;

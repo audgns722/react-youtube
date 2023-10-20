@@ -36,7 +36,7 @@
                 position: absolute;
                 width: 50px;
                 height: 50px;
-                background-color: #ffee00;
+                background-color: var(--mycoloryellow);
                 border-radius: 15px;
             }
         }
@@ -44,14 +44,15 @@
         span {
             font-size: 24px;
             line-height: 1;
-            font-family: var(--mainfont-bookk);
+            font-family: var(--subfont-oswald);
             font-weight: 900;
             text-transform: uppercase;
-            color: #b7ffa4;
+            color: var(--mycoloryellow);
             text-align: center;
-
+            letter-spacing :0.2rem; 
             i {
                 font-size: 20px;
+
             }
         }
 
@@ -64,7 +65,7 @@
     padding: 10px;
 
     .menu {
-
+        margin-bottom: 18px;
         li {
             margin: 5px;
 
@@ -80,7 +81,7 @@
                 transition: all 0.3s;
 
                 &:hover {
-                    background-color: rgba(0, 173, 66, 0.562);
+                    background-color: var(--acitvehover);
                 }
             }
             &.active {
@@ -109,19 +110,20 @@
 
             a {
                 display: block;
-                font-size: 0.7rem;
+                font-size: 0.8rem;
                 line-height: 1;
+                font-weight: 400;
                 color: var(--white);
                 padding: 6px;
                 position: relative;
                 text-align: center;
                 border-radius: 1rem;
                 transition: all 0.3s;
-                border: 1px dashed #007038;
-                background-color: rgb(0, 43, 16);
+                border: 1px dashed var(--mycoloryellow);
+                background-color: var(--mycloorgray);
 
                 &:hover {
-                    background-color: rgba(0, 85, 33, 0.562);
+                    background-color: var(--acitvehover);
                 }
             }
 
@@ -159,12 +161,19 @@
         a {
             display: inline-block;
             padding: 5px 7px;
-            background-color: #ffffff17;
+            background-color: var(--acitvehover);
+            border-radius: 15px;
             
             svg {
                 width: 24px;
                 height: 24px;
                 color: white;
+                &:hover {
+                    color: var(--black);
+                }
+            }
+            &:hover {
+                background-color: var(--mycoloryellow);
             }
         }
     }
