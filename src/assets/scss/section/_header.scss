@@ -131,22 +131,22 @@
         padding: 5px 0;
 
         li {
-            margin: 5px;
+            margin : 1.2rem 0.5rem;
 
-            a {
-                display: block;
-                font-size: 0.8rem;
+            a { 
+                font-size: 1rem;
                 line-height: 1;
                 font-weight: 400;
                 color: var(--black);
                 padding: 1rem;
-                margin-bottom: 1rem;
+
                 position: relative;
                 text-align: center;
                 transition: all 0.3s;
 
                 &:hover {
                     background-color: #ffe8b7;
+                    border-radius: 15px;
                     transform: scale(1.1);
                 }
             }

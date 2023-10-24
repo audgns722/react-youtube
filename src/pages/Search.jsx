@@ -41,7 +41,7 @@ const Search = () => {
                                 {video.snippet.description}
                             </div>
                             <div className='info'>
-                                <span className='author'>{video.snippet.channelTitle}</span>
+                                <Link to={`/channel/${video.snippet.channelId}`} className='author'>{video.snippet.channelTitle}</Link>
                                 <span className='date'>{formatDate(video.snippet.publishedAt)}</span>
                             </div>
                         </div>
