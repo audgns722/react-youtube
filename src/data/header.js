@@ -7,15 +7,15 @@ import { IoLogoYoutube } from "react-icons/io";
 export const menuText = [
     {
         title: "다큐 유튜버",
-        icon: <FcVideoCall />,
+        // icon: <FcVideoCall />,
         src: "/"
     },{
         title: "인생 다큐",
-        icon: <FcLike />,
+        // icon: <FcLike />,
         src: "/today"
     },{
         title: "추천 다큐",
-        icon: <FcSearch />,
+        // icon: <FcSearch />,
         src: "/youtuber"
     }
 ]
@@ -33,9 +33,6 @@ export const keywordText = [
     },{
         title: "내셔널지오그래픽",
         src: "/search/네셔널지오그래픽"
-    },{
-        title: "히스토리",
-        src: "/search/히스토리"
     },{
         title: "SBS DALI",
         src: "/search/SBSDALI"

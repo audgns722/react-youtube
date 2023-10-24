@@ -4,6 +4,7 @@
         display: flex;
         padding: 10px;
         margin: 10px;
+        border-bottom: 1px dashed #000;
 
         em {
             width: 50px;
@@ -11,54 +12,72 @@
             margin-right: 10px;
             position: relative;
             color: #145c00;
-            // animation: logo 25s 5s ease-in-out infinite;
-
-            // @keyframes logo {
-            //     0% {
-            //         transform: rotate(0deg);
-            //         color: #d0ff00;
-            //     }
-
-            //     50% {
-            //         transform: rotate(900deg);
-            //         color: rgb(255, 255, 255);
-            //     }
-
-            //     100% {
-            //         transform: rotate(0deg);
-            //         color: #d0ff00;
-            //     }
+            animation: logo 2s cubic-bezier(0.455, 0.030, 0.515, 0.955) both infinite;
+            @keyframes logo {
+                0%,
+                100% {
+                    -webkit-transform: rotate(0deg);
+                    transform: rotate(0deg);
+                    -webkit-transform-origin: 50% 100%;
+                    transform-origin: 50% 100%;
+                }
+                10% {
+                    -webkit-transform: rotate(2deg);
+                    transform: rotate(2deg);
+                }
+                20%,
+                40%,
+                60% {
+                    -webkit-transform: rotate(-4deg);
+                    transform: rotate(-4deg);
+                }
+                30%,
+                50%,
+                70% {
+                    -webkit-transform: rotate(4deg);
+                    transform: rotate(4deg);
+                }
+                80% {
+                    -webkit-transform: rotate(-2deg);
+                    transform: rotate(-2deg);
+                }
+                90% {
+                    -webkit-transform: rotate(2deg);
+                    transform: rotate(2deg);
+                }
             }
 
 
             svg {
-                // margin-top: 7px;
                 position: absolute;
                 width: 50px;
                 height: 50px;
-                background-color: var(--mycoloryellow);
-                border-radius: 15px;
+                background-color: #f3d514;
+                border-radius: 50%;
+                padding: 5px;
             }
         }
-
-        span {
-            font-size: 24px;
-            line-height: 1;
-            font-family: var(--subfont-oswald);
-            font-weight: 900;
-            text-transform: uppercase;
-            color: var(--mycoloryellow);
-            text-align: center;
-            letter-spacing :0.2rem; 
-            i {
-                font-size: 20px;
-
-            }
-        }
-
-        outline: #fff;
-        border-bottom: 1px dashed var(--white);
     }
+
+    span {
+        font-size: 24px;
+        line-height: 1;
+        font-family: var(--subfont-oswald);
+        font-weight: 900;
+        text-transform: uppercase;
+        color: var(--black);
+        text-align: center;
+        letter-spacing: 0.2rem;
+
+        i {
+            font-size: 20px;
+
+        }
+    }
+
+    outline: #000;
+
+}
 
 
 .header__menu {
@@ -66,27 +85,30 @@
 
     .menu {
         margin-bottom: 18px;
+
         li {
             margin: 5px;
 
             a {
                 font-size: 1.2rem;
+                font-weight: 600;
                 display: block;
                 line-height: 1;
-                color: var(--white);
-                padding: 1rem 2rem 1rem 2.5rem;
+                color: var(--black);
+                padding: 1rem 1.5rem;
                 position: relative;
                 text-align: center;
                 border-radius: 1rem;
                 transition: all 0.3s;
 
                 &:hover {
-                    background-color: var(--acitvehover);
+                    background-color: #ffe8b7;
                 }
             }
+
             &.active {
                 a {
-                    background-color: var(--acitvehover);
+                    background-color: #ffe8b7;
                 }
             }
 
@@ -98,13 +120,16 @@
                 top: 0.9rem;
             }
 
-            
+
         }
 
     }
+
     .keyword {
-        border-top: 1px dashed #fff;
-        padding: 5px 0 0 0;
+        border-top: 1px dashed #000;
+        border-bottom: 1px dashed #000;
+        padding: 5px 0;
+
         li {
             margin: 5px;
 
@@ -113,17 +138,16 @@
                 font-size: 0.8rem;
                 line-height: 1;
                 font-weight: 400;
-                color: var(--white);
-                padding: 6px;
+                color: var(--black);
+                padding: 1rem;
+                margin-bottom: 1rem;
                 position: relative;
                 text-align: center;
-                border-radius: 1rem;
                 transition: all 0.3s;
-                border: 1px dashed var(--mycoloryellow);
-                background-color: var(--mycloorgray);
 
                 &:hover {
-                    background-color: var(--acitvehover);
+                    background-color: #ffe8b7;
+                    transform: scale(1.1);
                 }
             }
 
@@ -145,7 +169,7 @@
 }
 
 .header__sns {
-    border-top: 1px dashed var(--white);
+    border-top: 1px dashed #000;
     position: absolute;
     bottom: 0;
     left: 0;
@@ -155,25 +179,27 @@
 
 
     li {
-        
+
         display: inline-block;
 
         a {
             display: inline-block;
             padding: 5px 7px;
-            background-color: var(--acitvehover);
+            background-color: #333;
             border-radius: 15px;
-            
+            margin: 0 5px;
+            transition: all 0.3s;
+
             svg {
                 width: 24px;
                 height: 24px;
                 color: white;
-                &:hover {
-                    color: var(--black);
-                }
+                padding-top: 5px;
+                
             }
+
             &:hover {
-                background-color: var(--mycoloryellow);
+                background-color: var(--mycloorgray);
             }
         }
     }

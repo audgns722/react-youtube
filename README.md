@@ -11,6 +11,8 @@
 sass를 설치 : `npm install sass`
 react-router-dom 설치 : `npm install react-router-dom`
 react-icons 설지 : `npm install react-icons`
+axios 설치 :`npm i axios`
+react-player 설치 : `npm i react-player`
 
 ## 터미널 깃 업로드 커밋
 git add.

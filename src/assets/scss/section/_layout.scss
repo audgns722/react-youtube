@@ -5,22 +5,21 @@
     width: 260px;
     height: 100%;
     z-index: 1000;
-    background-color: var(--mycolorgray);
+    background-color: #fff6e2
 }
 #main {
     max-width: 2000px;
     min-height: 100vh;
     margin: 0 auto;
     padding-left: 260px;
-    background-color: var(--background);
+    background-color: #eaedde
 }
 #footer {
     text-align: center;
-    background-color: var(--background);
-    // border-top: 1px solid var(--black);
-    padding: 10px 10px 10px 250px;
+    background-color: #fff6e2;
+    border-top: 1px dashed var(--white);
+    padding: 30px 10px 10px 250px;
     
-
     a {
         color: var(--black);
         padding: 10px 20px;
@@ -29,7 +28,7 @@
 
         &:hover {
             @include underline;
-            text-decoration-color: var(--white);
+            text-decoration-color: var(--black);
         }
     }
 }

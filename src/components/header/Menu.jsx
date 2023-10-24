@@ -14,8 +14,7 @@ const Menu = () => {
                     <li key={key} className={location.pathname === menu.src ? 'active' : ''}>
                         <Link to={menu.src}>{menu.icon}{menu.title}</Link>
                     </li>
-                ))}
-                
+                ))} 
             </ul>
             <ul className='keyword'>
                 {keywordText.map((keyword, key) => (
@@ -25,12 +24,8 @@ const Menu = () => {
                         </Link>
                     </li>
                 ))}
-                
-                
             </ul>
-            🏀🥎⚾🏐⚽🏀🥎⚾🏐⚽🏀
         </nav>
-        
     )
 }
 

@@ -8,11 +8,15 @@ import Header from './components/section/Header'
 import Footer from './components/section/Footer'
 import Main from './components/section/Main'
 import Search from './pages/Search'
+import ScrollTo from './utils/scrollTo'
+import Video from './pages/Video'
+
 
 
 const App = () => {
     return (
         <BrowserRouter>
+            <ScrollTo />
             <Header />
             <Main>
                 <Routes>
@@ -20,6 +24,7 @@ const App = () => {
                     <Route path='/today' element={<Today />} />
                     <Route path='/youtuber' element={<Youtuber />} />
                     <Route path='/search/:searchId' element={<Search />} />
+                    <Route path='/video/:videoId' element={<Video />} />
                     <Route path='*' element={<Not />} />
                 </Routes>
             </Main>

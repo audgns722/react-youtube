@@ -1,15 +1,13 @@
 .search__inner {
     width: 100%;
-    padding: 17px 40px;
-    
+    padding: 17px 40px;    
 
     label {
         display: none;
     }
     .search__input {
-        width: 100%;
-        background-color: #ffffff88;
-        border: 2px solid var(--backgroundHeader);
+        width: 50%;
+        background-color: #ffffff;
         padding: 15px 30px;
         border-radius: 50px;
         color: var(--black);
