@@ -9,12 +9,19 @@ import { AiFillEye, AiFillLike, AiOutlineComment } from "react-icons/ai";
 const Video = () => {
     const { videoId } = useParams();
     const [videoDetail, setVideoDetail] = useState(null);
+    const [videoComments, setVideoComments] = useState([]);
 
     useEffect(() => {
         fetchFromAPI(`videos?part=snippet,statistics&id=${videoId}`)
             .then((data) => {
                 setVideoDetail(data.items[0]);
                 console.log(data);
+            });
+        fetchFromAPI(`commentThreads?key=7f5e7c98cemshc09d11216c9b117p1e3963jsn2778434e8e39&videoId=${videoId}&part=snippet`)
+            .then((data) => {
+                const comments = data.items.slice(0, 10); // 여기서 10은 원하는 댓글 개수입니다.
+                console.log(comments);
+                setVideoComments(comments);
             });
     }, [videoId]);
 
@@ -23,7 +30,15 @@ const Video = () => {
         setExpandedDesc(!expandedDesc);
     };
 
-
+    function formatNumberWithK(number) {
+        if (number >= 1000) {
+            // Add "k" when the number is over 1000
+            return (number / 1000).toFixed(1) + "k";
+        } else {
+            // Numbers less than 1000 are displayed as is
+            return number.toString();
+        }
+    }
 
     return (
         <section id='videoViewPage'>
@@ -47,16 +62,25 @@ const Video = () => {
                                 <Link to={`/channel/${videoDetail.snippet.channelId}`}>{videoDetail.snippet.channelTitle}</Link>
                             </div>
                             <div className='count'>
-                                <span><AiFillEye /> : {videoDetail.statistics.viewCount}</span><br />
-                                <span><AiFillLike /> : {videoDetail.statistics.likeCount}</span><br />
-                                <span><AiOutlineComment /> : {videoDetail.statistics.commentCount}</span>
+                                <span><AiFillEye /> : {formatNumberWithK(videoDetail.statistics.viewCount)}</span>
+                                <span><AiFillLike /> : {formatNumberWithK(videoDetail.statistics.likeCount)}</span>
+                                <span><AiOutlineComment /> : {formatNumberWithK(videoDetail.statistics.commentCount)}</span>
                             </div>
                         </div>
-                        <button onClick={toggleDescription}>
-                            {expandedDesc ? '접기' : '더보기'}
+                        <button className='video__moreBtn' onClick={toggleDescription}>
+                            {expandedDesc ? '▲ 접기' : '▼ 더보기'}
                         </button>
                         <div className="video__desc">
-                            {expandedDesc ? videoDetail.snippet.description : videoDetail.snippet.description.slice(0, 3) + '...'}
+                            {expandedDesc ? videoDetail.snippet.description : videoDetail.snippet.description.split('\n', 2).join('\n')}
+                        </div>
+                        <div className="video__comments">
+                            {videoComments.map((comment, index) => (
+                                <div key={index} className="comment">
+                                    <p>💬 {comment.snippet.topLevelComment.snippet.authorDisplayName} 
+                                    : {comment.snippet.topLevelComment.snippet.textOriginal}</p>
+                                    {/* 이외의 다른 댓글 정보를 표시할 수 있습니다. */}
+                                </div>
+                            ))}
                         </div>
                     </div>
                 </div>

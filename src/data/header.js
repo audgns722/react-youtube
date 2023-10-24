@@ -1,4 +1,4 @@
-import { FcVideoCall, FcLike, FcSearch } from 'react-icons/fc'
+// import { FcVideoCall, FcLike, FcSearch } from 'react-icons/fc'
 // import { ImPlay3 } from "react-icons/im";
 import { ImGithub, ImInstagram, ImCodepen } from "react-icons/im";
 import { IoLogoYoutube } from "react-icons/io";
