@@ -17,7 +17,7 @@ const Video = () => {
                 setVideoDetail(data.items[0]);
                 console.log(data);
             });
-        fetchFromAPI(`commentThreads?key=7f5e7c98cemshc09d11216c9b117p1e3963jsn2778434e8e39&videoId=${videoId}&part=snippet`)
+        fetchFromAPI(`commentThreads?key=36c0488b9bmsha694c50fc1a58dap12df45jsn98128f857dfb&videoId=${videoId}&part=snippet`)
             .then((data) => {
                 const comments = data.items.slice(0, 10); // 여기서 10은 원하는 댓글 개수입니다.
                 console.log(comments);
@@ -76,8 +76,7 @@ const Video = () => {
                         <div className="video__comments">
                             {videoComments.map((comment, index) => (
                                 <div key={index} className="comment">
-                                    <p>💬 {comment.snippet.topLevelComment.snippet.authorDisplayName} 
-                                    : {comment.snippet.topLevelComment.snippet.textOriginal}</p>
+                                    <p>💬 {comment.snippet.topLevelComment.snippet.authorDisplayName} : {comment.snippet.topLevelComment.snippet.textOriginal}</p>
                                     {/* 이외의 다른 댓글 정보를 표시할 수 있습니다. */}
                                 </div>
                             ))}
